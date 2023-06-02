@@ -1,6 +1,7 @@
 package g.g.ui.slideshow.tabs;
 
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,45 +18,45 @@ import java.util.List;
  */
 public class FishQuantRankViewAdapter extends RecyclerView.Adapter<FishQuantRankViewAdapter.ViewHolder> {
 
-    private final List<PlaceholderItem> mValues;
+	private final List<PlaceholderItem> mValues;
 
-    public FishQuantRankViewAdapter(List<PlaceholderItem> items) {
-        mValues = items;
-    }
+	public FishQuantRankViewAdapter(List<PlaceholderItem> items) {
+		mValues = items;
+	}
 
-    @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+	@Override
+	public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-    return new ViewHolder(FragmentFishQuantRankBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
+		return new ViewHolder(FragmentFishQuantRankBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
 
-    }
+	}
 
-    @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
-        holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
-    }
+	@Override
+	public void onBindViewHolder(final ViewHolder holder, int position) {
+		holder.mItem = mValues.get(position);
+		holder.mIdView.setText(mValues.get(position).id);
+		holder.mContentView.setText(mValues.get(position).content);
+	}
 
-    @Override
-    public int getItemCount() {
-        return mValues.size();
-    }
+	@Override
+	public int getItemCount() {
+		return mValues.size();
+	}
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        public final TextView mIdView;
-        public final TextView mContentView;
-        public PlaceholderItem mItem;
+	public class ViewHolder extends RecyclerView.ViewHolder {
+		public final TextView mIdView;
+		public final TextView mContentView;
+		public PlaceholderItem mItem;
 
-    public ViewHolder(FragmentFishQuantRankBinding binding) {
-      super(binding.getRoot());
-      mIdView = binding.itemNumber;
-      mContentView = binding.content;
-    }
+		public ViewHolder(FragmentFishQuantRankBinding binding) {
+			super(binding.getRoot());
+			mIdView = binding.itemNumber;
+			mContentView = binding.content;
+		}
 
-        @Override
-        public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
-        }
-    }
+		@Override
+		public String toString() {
+			return super.toString() + " '" + mContentView.getText() + "'";
+		}
+	}
 }

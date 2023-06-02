@@ -19,10 +19,7 @@ import g.g.ui.slideshow.tabs.placeholder.PlaceholderContent;
  * A fragment representing a list of Items.
  */
 public class FishTypesRankFragment extends Fragment {
-
-	// TODO: Customize parameter argument names
 	private static final String ARG_COLUMN_COUNT = "column-count";
-	// TODO: Customize parameters
 	private int mColumnCount = 2;
 
 	/**
