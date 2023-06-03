@@ -22,7 +22,8 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDO4VqGY2y2xtX1GOFf7b1LzrsUyMigv30" />
+            android:value="no" />
+<!--        TODO put newAPI here and don't make it public, old one was deleted-->
 
         <activity
             android:name=".ui.camera.CameraActivity"
