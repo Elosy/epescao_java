@@ -8,20 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.Arrays;
+import java.util.List;
+
 import g.g.R;
-import g.g.ui.slideshow.tabs.placeholder.PlaceholderContent.PlaceholderItem;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link PlaceholderItem}.
- * TODO: Replace the implementation with code for your data type.
- */
 public class FishQuantRankViewAdapter extends RecyclerView.Adapter<FishQuantRankViewAdapter.ViewHolder> {
+	private List<ListItem> TEST = Arrays.asList(new ListItem("asdasd", "12"), new ListItem("asd", "2"));
 
-	public String [] localDataSet;
-
-	public static class ViewHolder extends RecyclerView.ViewHolder{
+	public static class ViewHolder extends RecyclerView.ViewHolder {
 		private final TextView textView;
-
 
 		public ViewHolder(@NonNull View itemView) {
 			super(itemView);
@@ -29,13 +25,9 @@ public class FishQuantRankViewAdapter extends RecyclerView.Adapter<FishQuantRank
 			textView = (TextView) itemView.findViewById(R.id.userName);
 		}
 
-		public TextView getTextView(){
+		public TextView getTextView() {
 			return textView;
 		}
-	}
-
-	public void CustomAdapter(String [] dataSet){
-		localDataSet = dataSet;
 	}
 
 	@NonNull
@@ -48,11 +40,11 @@ public class FishQuantRankViewAdapter extends RecyclerView.Adapter<FishQuantRank
 
 	@Override
 	public void onBindViewHolder(@NonNull FishQuantRankViewAdapter.ViewHolder holder, int position) {
-		holder.getTextView().setText(localDataSet[position]);
+		holder.getTextView().setText(position);
 	}
 
 	@Override
 	public int getItemCount() {
-		return localDataSet.length;
+		return TEST.size();
 	}
 }

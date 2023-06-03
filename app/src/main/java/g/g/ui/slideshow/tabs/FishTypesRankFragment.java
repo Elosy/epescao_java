@@ -13,21 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import g.g.R;
-import g.g.ui.slideshow.tabs.placeholder.PlaceholderContent;
 
-/**
- * A fragment representing a list of Items.
- */
 public class FishTypesRankFragment extends Fragment {
 	private static final String ARG_COLUMN_COUNT = "column-count";
 	private int mColumnCount = 2;
-
-	/**
-	 * Mandatory empty constructor for the fragment manager to instantiate the
-	 * fragment (e.g. upon screen orientation changes).
-	 */
-	public FishTypesRankFragment() {
-	}
 
 	// TODO: Customize parameter initialization
 	public static FishTypesRankFragment newInstance(int columnCount) {
@@ -61,7 +50,7 @@ public class FishTypesRankFragment extends Fragment {
 			} else {
 				recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
 			}
-			recyclerView.setAdapter(new FishTypesRankViewAdapter(PlaceholderContent.ITEMS));
+			recyclerView.setAdapter(new FishTypesRankViewAdapter());
 		}
 		return view;
 	}

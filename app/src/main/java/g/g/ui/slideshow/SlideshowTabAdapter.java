@@ -7,8 +7,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import g.g.ui.slideshow.tabs.FishQuantRankFragment;
 import g.g.ui.slideshow.tabs.FishQuantRankViewAdapter;
 import g.g.ui.slideshow.tabs.FishTypesRankFragment;
-import g.g.ui.slideshow.tabs.FishTypesRankViewAdapter;
-import g.g.ui.slideshow.tabs.placeholder.PlaceholderContent;
 
 public class SlideshowTabAdapter extends FragmentStateAdapter {
 

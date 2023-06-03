@@ -12,27 +12,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.Arrays;
-import java.util.List;
 
 import g.g.R;
-import g.g.ui.slideshow.tabs.placeholder.PlaceholderContent;
 
-/**
- * A fragment representing a list of Items.
- */
 public class FishQuantRankFragment extends Fragment {
 	private static final String ARG_COLUMN_COUNT = "column-count";
 	private int mColumnCount = 2;
-
-	private List<PlaceholderContent.PlaceholderItem> TEST = Arrays.asList(new PlaceholderContent.PlaceholderItem("asdasd", "12"), new PlaceholderContent.PlaceholderItem("asd", "2"));
-
-	/**
-	 * Mandatory empty constructor for the fragment manager to instantiate the
-	 * fragment (e.g. upon screen orientation changes).
-	 */
-	public FishQuantRankFragment() {
-	}
 
 	// TODO: Customize parameter initialization
 	public static FishQuantRankFragment newInstance(int columnCount) {
