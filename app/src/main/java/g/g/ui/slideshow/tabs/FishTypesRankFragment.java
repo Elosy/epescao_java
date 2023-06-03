@@ -30,7 +30,6 @@ public class FishTypesRankFragment extends Fragment {
 	}
 
 	// TODO: Customize parameter initialization
-	@SuppressWarnings("unused")
 	public static FishTypesRankFragment newInstance(int columnCount) {
 		FishTypesRankFragment fragment = new FishTypesRankFragment();
 		Bundle args = new Bundle();

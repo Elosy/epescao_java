@@ -12,6 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.Arrays;
+import java.util.List;
+
 import g.g.R;
 import g.g.ui.slideshow.tabs.placeholder.PlaceholderContent;
 
@@ -22,6 +25,8 @@ public class FishQuantRankFragment extends Fragment {
 	private static final String ARG_COLUMN_COUNT = "column-count";
 	private int mColumnCount = 2;
 
+	private List<PlaceholderContent.PlaceholderItem> TEST = Arrays.asList(new PlaceholderContent.PlaceholderItem("asdasd", "12"), new PlaceholderContent.PlaceholderItem("asd", "2"));
+
 	/**
 	 * Mandatory empty constructor for the fragment manager to instantiate the
 	 * fragment (e.g. upon screen orientation changes).
@@ -30,7 +35,6 @@ public class FishQuantRankFragment extends Fragment {
 	}
 
 	// TODO: Customize parameter initialization
-	@SuppressWarnings("unused")
 	public static FishQuantRankFragment newInstance(int columnCount) {
 		FishQuantRankFragment fragment = new FishQuantRankFragment();
 		Bundle args = new Bundle();
@@ -62,7 +66,7 @@ public class FishQuantRankFragment extends Fragment {
 			} else {
 				recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
 			}
-			recyclerView.setAdapter(new FishQuantRankViewAdapter(PlaceholderContent.ITEMS));
+			recyclerView.setAdapter(new FishQuantRankViewAdapter());
 		}
 		return view;
 	}

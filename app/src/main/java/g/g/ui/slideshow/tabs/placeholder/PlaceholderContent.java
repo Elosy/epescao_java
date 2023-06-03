@@ -3,6 +3,7 @@ package g.g.ui.slideshow.tabs.placeholder;
 import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ public class PlaceholderContent {
 	/**
 	 * An array of sample (placeholder) items.
 	 */
-	public static final List<PlaceholderItem> ITEMS = new ArrayList<PlaceholderItem>();
+	public static final List<PlaceholderItem> ITEMS = Arrays.asList(new PlaceholderItem("asdasd", "12"), new PlaceholderItem("asd", "23"));
 
 	/**
 	 * A map of sample (placeholder) items, by ID.
@@ -40,7 +41,7 @@ public class PlaceholderContent {
 	}
 
 	private static PlaceholderItem createPlaceholderItem(int position) {
-		return new PlaceholderItem(String.valueOf(position), "Item " + position, makeDetails(position));
+		return new PlaceholderItem(String.valueOf(position), "Item " + position);
 	}
 
 	private static String makeDetails(int position) {
@@ -58,12 +59,10 @@ public class PlaceholderContent {
 	public static class PlaceholderItem {
 		public final String id;
 		public final String content;
-		public final String details;
 
-		public PlaceholderItem(String id, String content, String details) {
+		public PlaceholderItem(String id, String content) {
 			this.id = id;
 			this.content = content;
-			this.details = details;
 		}
 
 		@NonNull

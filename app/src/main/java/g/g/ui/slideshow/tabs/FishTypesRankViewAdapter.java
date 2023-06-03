@@ -48,10 +48,10 @@ public class FishTypesRankViewAdapter extends RecyclerView.Adapter<FishTypesRank
 		public final TextView mContentView;
 		public PlaceholderItem mItem;
 
-		public ViewHolder(FragmentFishTypesRankBinding binding) {
+		public ViewHolder(FragmentFishTypesRankBinding binding) { // TODO remember this
 			super(binding.getRoot());
-			mIdView = binding.itemNumber;
-			mContentView = binding.content;
+			mIdView = binding.userName;
+			mContentView = binding.count;
 		}
 
 		@Override
